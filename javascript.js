@@ -19,4 +19,17 @@ function getComputerChoice(){
 return hand;
 
 }
+
+function getHumanChoice(){
+    let hand;
+    const options = ["rock", "paper", "scissors"];
+
+    while (!options.includes(hand) ) {
+        hand = prompt("Choose an option: rock, paper or scissors");
+    }
+    return hand;
+}
+
+
 console.log(getComputerChoice())
+console.log(getHumanChoice())
