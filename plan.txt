@@ -8,3 +8,29 @@ if number < 1/3 hand=rock,
 if number =>1/3 and <2/3 hand=paper, 
 else rock
 return hand
+
+human choice
+
+Create function getHumanChoice
+create const options to hold options
+create variable hand to hold choice
+while hand is not equal to one of 
+    the options, keep asking and 
+    saving result in hand
+return option
+
+score variables
+
+create variable to keep human score
+    with initial value of 0
+create variable to keep computer score
+    with initial value of 0
+
+logic to play a single round
+
+Create function playRound
+    with parameters humanChoice and
+    computerChoice
+make humanChoice case insensitive
+Write in console who wins
+Increment score
