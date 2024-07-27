@@ -12,8 +12,7 @@ function getComputerChoice(){
     } else {
         hand="scissors";
     }
-    console.log(num)
-
+console.log(num);
 return hand;
 
 }
@@ -29,9 +28,6 @@ function getHumanChoice(){
 }
 
 function playGame(computerSelection, humanSelection){
-
-
-
 
     function playRound(humanChoice, computerChoice) {
         humanChoice = humanChoice.toLowerCase();
@@ -57,19 +53,60 @@ function playGame(computerSelection, humanSelection){
 let humanScore = 0;
 let computerScore = 0;
 
-let i = 0;
+/* let i = 0;
 while (i < 5) {
     const computerSelection = getComputerChoice();
     const humanSelection = getHumanChoice();
     playGame(computerSelection, humanSelection);
     i++;
-  }
-if (humanScore > computerScore) {
-    console.log("Human wins");
-}   else if (computerScore > humanScore){
-    console.log("Computer wins");
-}   else {
-    console.log("Draw");
-}
+  } */
+
+
+let computerSelection = "";
+
+const rockButton = document.createElement("button");
+rockButton.textContent = "Rock"
+document.body.appendChild(rockButton);
+rockButton.addEventListener("click", () => {
+    computerSelection = getComputerChoice();
+    playGame(computerSelection, "rock");
+    scorePara.textContent = Score();
+})
+
+const paperButton = document.createElement("button");
+paperButton.textContent = "Paper"
+document.body.appendChild(paperButton);
+paperButton.addEventListener("click", () => {
+    computerSelection = getComputerChoice();
+    playGame(computerSelection, "paper");
+    scorePara.textContent = Score();
+})
+
+
+const scissorsButton = document.createElement("button");
+scissorsButton.textContent = "Scissors"
+document.body.appendChild(scissorsButton);
+scissorsButton.addEventListener("click", () => {
+    computerSelection = getComputerChoice();
+    playGame(computerSelection, "scissors");
+    scorePara.textContent = Score();
+})
+
+const scoreDiv = document.createElement("div");
+document.body.appendChild(scoreDiv);
+const scorePara = document.createElement("p");
+scoreDiv.appendChild(scorePara);
+
+
+/* function Score() {
+    if (humanScore > computerScore) {
+        return "Human wins"
+    }else if (computerScore > humanScore){
+        return  "Computer wins"
+    }else if (computerScore = humanScore)
+        return "Draw"
+    
+} */
+
 
 
